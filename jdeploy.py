@@ -1,6 +1,6 @@
 #! /usr/bin/python
 
-import adm_mdeploy
+import adm_deploy
 import adm_pkginfo
 import argparse
 
