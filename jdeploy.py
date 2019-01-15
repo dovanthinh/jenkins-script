@@ -33,7 +33,7 @@ if __name__ == "__main__":
     parser.add_argument("-m", "--machine", help="which server")
     args = parser.parse_args()
 
-    adm_deploy = ADMDeploy(args.machine)
-    adm_deploy.set_pkgs(args.packages)
+    admdeploy = ADMDeploy(args.machine)
+    admdeploy.set_pkgs(args.packages)
     print "Deploy:"
-    adm_deploy.deploy()
+    admdeploy.deploy()
