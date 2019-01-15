@@ -14,7 +14,7 @@ class ADMDeploy:
         for pkg_path in pkg_list:
             print pkg_path
             # Set pkg list for installing
-            pkginfo = adm_pkgInfo.PkgInfo(pkg_path)
+            pkginfo = adm_pkginfo.PkgInfo(pkg_path)
             if "=" in pkg_path:
                  pkginfo.process()
                  self.pkgs[pkginfo.pkgname] = pkginfo.pkgver
@@ -24,7 +24,7 @@ class ADMDeploy:
 
     def deploy(self):
         d = adm_deploy.JDeploy(self.pkgs, self.srv)
-        d.dry_deploy
+        d.dry_deploy()
         d.deploy()
 
 if __name__ == "__main__":
