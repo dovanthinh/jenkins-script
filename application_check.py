@@ -6,7 +6,7 @@ import ast
 import argparse
 
 check_mk_live = "/omd/sites/adm_game/tmp/run/live"
-execfile("./application_check_dict.py")
+execfile("/sysadmin/jenkins-script/application_check_dict.py")
 
 def application_check(application, server):
     sock = socket.socket(socket.AF_UNIX, socket.SOCK_STREAM)
